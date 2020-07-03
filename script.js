@@ -37,6 +37,7 @@ function countrySelected() {
       //intégration de la liste li
       let myLi = document.createElement("li");
       myLi.style.listStyle = "none";
+      myLi.style.color = "white";
 
       //dans mon nouveau li tu vas mettre le nom du pays qui a été trouvé
       myLi.innerHTML = countryArray[i];
@@ -50,12 +51,19 @@ function countrySelected() {
 
 
 discover = () => {
+  //je créé une variable 
   let countryResult = document.getElementById("inputCountry").value;
   for (i = 0; i < global.length; i++) {
     if (global[i].name.includes(countryResult)) {
       console.log("NAME : ==> " + global[i].name);
       console.log("img : ==> " + global[i].flag);
       console.log("capital : ==> " + global[i].capital);
+      document.getElementById("Capital").textContent = global[i].capital;
+      document.getElementById("name").textContent = global[i].name;
+      document.getElementById("flag").src = global[i].flag;
+      let flag = document.getElementById("flag");
+      flag.setAttribute("src",global[i].flag);
+
     }
   }
 

@@ -17,19 +17,23 @@
       <a class="nav-link text-light font-weight-bold" href="#">Home</a>
     </nav>
   </header>
-
+  <p class="text-light m-2">Country : <span id="name"></span></p>
+  <p class="text-light m-2">Capitale : <span id="Capital"></span></p>
+  <p class="text-light m-2">Flag :</p>
+  <img src="" alt="" id="flag" />
+  <!-- <p>Flag : <span id="flag"></span></p> -->
   <h2 class="text-light text-center mb-5">Show the countries</h2>
   <section class="row justify-content-center mb-5">
-    <input type="text" class="form-control col-6" id="inputCountry" placeholder="Enter the country"
+    <input type="text" class="form-control form-control-lg col-6" id="inputCountry" placeholder="Enter the country"
       oninput="countrySelected()">
+      <button  class="btn btn-secondary btn-lg active ml-2" id="discover" onclick="discover()">button</button>
   </section>
   <section class="row">
     <!-- creation d'un <ul></ul> -->
     <ul id="zoneTexte" class="m-auto">
     </ul>
-    <button id="discover" onclick="discover()">button</button>
   </section>
-  
+
   <section class="row justify-content-center">
 
   </section>
